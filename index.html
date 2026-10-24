@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>TimeLine — Video Editing &amp; Creative Studio</title>
+  <meta name="description" content="TimeLine is a video editing, post-production and visual design studio led by Jayanth S. Long-form edits, reels, motion design, colour, sound and posters for brands and creators." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TimeLine — Video Editing &amp; Creative Studio" />
+  <meta property="og:description" content="We cut time into stories. Edits, reels, motion and posters for brands that want to be watched." />
+  <meta property="og:image" content="assets/images/brand/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.replace("no-js", "js");
+      var theme = "dark";
+      try { theme = localStorage.getItem("tl-theme") || "dark"; } catch (e) {}
+      root.dataset.theme = theme;
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Preloader: a timeline scrubbing from 00:00 to 100 -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <img class="loader__mark" src="assets/icons/logo-mark.svg" alt="" width="46" height="58" />
+      <div class="loader__track"><span class="loader__fill"></span><span class="loader__head"></span></div>
+      <div class="loader__meta mono"><span>TIMELINE_V1.PRPROJ</span><span class="loader__count">00:00:00:00</span></div>
+    </div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#top" aria-label="TimeLine home">
+      <img src="assets/icons/logo-mark.svg" alt="" width="22" height="28" />
+      <span>TimeLine</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work" data-cursor="hover">Work</a>
+      <a href="#about" data-cursor="hover">Studio</a>
+      <a href="#services" data-cursor="hover">Services</a>
+      <a href="#contact" data-cursor="hover">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <span class="nav__clock mono" data-clock>BLR 00:00:00</span>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle data-cursor="hover">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg>
+      </button>
+      <a class="btn btn--small" href="#contact" data-cursor="hover">Start a project</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="mobile-menu" hidden data-menu>
+    <nav aria-label="Mobile">
+      <a href="#work">Work</a>
+      <a href="#about">Studio</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu__foot mono"><a data-config-href="mailto" data-config-text="email"></a></div>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero__video is-active" muted playsinline preload="auto"></video>
+        <video class="hero__video" muted playsinline preload="none"></video>
+        <div class="hero__shade"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow mono reveal-up"><span class="rec"></span> Video editing &amp; post-production studio</p>
+        <h1 class="hero__title" data-split>
+          <span class="line">We cut time</span>
+          <span class="line">into <em>stories</em></span>
+          <span class="line">people <span class="hero__mark"><img src="assets/icons/logo-mark.svg" alt="" /></span> watch.</span>
+        </h1>
+        <div class="hero__row">
+          <p class="hero__lede reveal-up">TimeLine edits long-form, short-form and motion content for brands and creators — then designs the posters and thumbnails that get it clicked.</p>
+          <div class="hero__ctas reveal-up">
+            <button class="btn btn--play" type="button" data-showreel data-cursor="play">
+              <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+              Watch showreel
+            </button>
+            <a class="btn btn--ghost" href="#work" data-cursor="hover">See the work</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faux NLE timeline tied to the hero clip playback -->
+      <div class="hero__timeline" aria-hidden="true">
+        <div class="tl__head mono">
+          <span data-hero-title>SEQ 01 — SHOWREEL</span>
+          <span class="tl__tc" data-hero-tc>00:00:00:00</span>
+        </div>
+        <div class="tl__ruler"></div>
+        <div class="tl__tracks">
+          <div class="tl__track tl__track--v" data-hero-clips></div>
+          <div class="tl__track tl__track--a"><span style="--w:100%"></span></div>
+        </div>
+        <span class="tl__playhead" data-hero-playhead></span>
+      </div>
+    </section>
+
+    <!-- ============ CLIENT MARQUEE ============ -->
+    <section class="marquee" aria-label="Brands and creators we have worked with">
+      <div class="marquee__label mono">Trusted by brands &amp; creators</div>
+      <div class="marquee__track" data-marquee>
+        <ul class="marquee__list">
+          <li>EVORA</li><li>Float Finance</li><li>Treevenii</li><li>Stylfort</li><li>Priya · Creator</li><li>R3spawn Gaming</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="work section" id="work">
+      <div class="section__head">
+        <p class="eyebrow mono">(01) Selected work</p>
+        <h2 class="display" data-split>Cuts, reels &amp; frames<br />that move people.</h2>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filter projects" data-filters>
+        <button role="tab" aria-selected="true" data-filter="all" data-cursor="hover">All <sup></sup></button>
+        <button role="tab" aria-selected="false" data-filter="editing" data-cursor="hover">Video Editing <sup></sup></button>
+        <button role="tab" aria-selected="false" data-filter="shorts" data-cursor="hover">Shorts/Reels <sup></sup></button>
+        <button role="tab" aria-selected="false" data-filter="posters" data-cursor="hover">Posters &amp; Graphics <sup></sup></button>      </div>
+
+      <div class="grid" data-grid aria-live="polite"></div>
+      <noscript><p class="mono">Enable JavaScript to browse the portfolio.</p></noscript>
+
+      <div class="work__more">
+        <button class="btn btn--ghost" type="button" data-more data-cursor="hover">Load more work</button>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about section" id="about">
+      <div class="section__head">
+        <p class="eyebrow mono">(02) The studio</p>
+      </div>
+      <p class="about__statement" data-words>
+        TimeLine is a creative studio for the scroll era. We take raw footage, rough ideas and half-finished
+        brand kits and turn them into <strong>edits with rhythm</strong>, <strong>reels with a hook</strong> and
+        <strong>visuals that hold the frame</strong> — so every second you publish earns its place on the timeline.
+      </p>
+
+      <div class="about__grid">
+        <article class="founder">
+          <div class="founder__card" data-tilt>
+            <img src="assets/icons/logo-mark.svg" alt="" class="founder__mark" />
+            <div class="founder__tc mono">REC ● 00:00:24:00</div>
+            <div class="founder__name">
+              <span class="mono">Founder &amp; Lead Editor</span>
+              <strong>Jayanth S</strong>
+            </div>
+          </div>
+          <div class="founder__copy">
+            <p>I am a creative strategist and multi-disciplinary designer dedicated to building cohesive brand experiences. With a toolkit that spans high-impact video editing and graphic design, I help brands bridge the gap between an idea and a finished product.</p>
+            <p>TimeLine started as my editing desk and grew into a studio partner for startups, Web3 teams, fashion labels and creators — from EV-charging launch films to festive campaign posters and daily creator reels.</p>
+          </div>
+        </article>
+
+        <ol class="principles">
+          <li><span class="mono">01</span><div><h3>Rhythm first</h3><p>Every cut lands on a beat — musical, emotional or informational. Pacing is the product.</p></div></li>
+          <li><span class="mono">02</span><div><h3>Hook in three seconds</h3><p>We plan openings for the feed, not the timeline. If it doesn't stop the thumb, it doesn't ship.</p></div></li>
+          <li><span class="mono">03</span><div><h3>One visual language</h3><p>Video, thumbnails and posters come from the same desk, so your brand looks like itself everywhere.</p></div></li>
+        </ol>
+      </div>
+
+      <dl class="stats" data-stats>
+        <div class="stat"><dt class="mono">Views generated</dt><dd><span data-count="views">0</span><span data-count-suffix="views"></span></dd></div>
+        <div class="stat"><dt class="mono">Projects delivered</dt><dd><span data-count="projects">0</span>+</dd></div>
+        <div class="stat"><dt class="mono">Brands &amp; creators</dt><dd><span data-count="brands">0</span>+</dd></div>
+        <div class="stat"><dt class="mono">Formats mastered</dt><dd><span data-count="formats" data-count-value="4">0</span></dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services section" id="services">
+      <div class="section__head">
+        <p class="eyebrow mono">(03) Services</p>
+        <h2 class="display" data-split>Everything between<br />raw footage &amp; publish.</h2>
+      </div>
+
+      <ul class="svc" data-services>
+        <li class="svc__item" data-preview="assets/images/thumbs/x-2097001967734366288.jpg">
+          <button class="svc__row" type="button" aria-expanded="false" data-cursor="hover">
+            <span class="svc__no mono">01</span>
+            <span class="svc__name">Video Editing</span>
+            <span class="svc__tags mono">YouTube · Commercials · Documentaries</span>
+            <span class="svc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="svc__body">
+            <div class="svc__inner">
+              <p>Story-led long-form editing for YouTube, brand films, product launches and documentaries. We build structure from hours of footage, then polish pacing, graphics and captions until it plays effortlessly.</p>
+              <ul class="mono"><li>Long-form YouTube</li><li>Commercials &amp; launch films</li><li>Documentary &amp; interviews</li><li>Event recaps</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="svc__item" data-preview="assets/images/thumbs/ig-DXO3shUDH28.jpg">
+          <button class="svc__row" type="button" aria-expanded="false" data-cursor="hover">
+            <span class="svc__no mono">02</span>
+            <span class="svc__name">Short-form Content</span>
+            <span class="svc__tags mono">Reels · TikTok · Shorts</span>
+            <span class="svc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="svc__body">
+            <div class="svc__inner">
+              <p>Vertical-first edits engineered for retention: three-second hooks, kinetic captions, trend-aware sound and loops that beg a rewatch. Built as one-offs or monthly content systems.</p>
+              <ul class="mono"><li>Instagram Reels</li><li>TikTok</li><li>YouTube Shorts</li><li>Creator retainers</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="svc__item" data-preview="assets/images/thumbs/x-2048665954318536792.jpg">
+          <button class="svc__row" type="button" aria-expanded="false" data-cursor="hover">
+            <span class="svc__no mono">03</span>
+            <span class="svc__name">Colour &amp; Sound</span>
+            <span class="svc__tags mono">Grading · Sound design · Mix</span>
+            <span class="svc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="svc__body">
+            <div class="svc__inner">
+              <p>Finishing that makes footage feel expensive. Shot matching and cinematic grades, plus sound design, clean-up and music edits so every frame and every whoosh feels intentional.</p>
+              <ul class="mono"><li>Colour correction &amp; grading</li><li>Sound design &amp; SFX</li><li>Dialogue clean-up</li><li>Music editing &amp; mix</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="svc__item" data-preview="assets/images/posters/thumbs/linked-post-6.jpg">
+          <button class="svc__row" type="button" aria-expanded="false" data-cursor="hover">
+            <span class="svc__no mono">04</span>
+            <span class="svc__name">Thumbnails, Posters &amp; Branding</span>
+            <span class="svc__tags mono">Thumbnails · Posters · Identity</span>
+            <span class="svc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="svc__body">
+            <div class="svc__inner">
+              <p>Click-worthy thumbnails, campaign posters, social creatives and brand systems — designed alongside the edit so your visuals and motion speak the same language.</p>
+              <ul class="mono"><li>YouTube thumbnails</li><li>Campaign &amp; sale posters</li><li>Social media kits</li><li>Logo &amp; visual identity</li></ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="svc__float" aria-hidden="true" data-svc-float><img alt="" /></div>
+
+      <ol class="process">
+        <li><span class="mono">IN 00:00</span><h4>Brief</h4><p>Goals, references, footage handoff.</p></li>
+        <li><span class="mono">V1 48H</span><h4>Rough cut</h4><p>Structure, story and pacing locked.</p></li>
+        <li><span class="mono">V2</span><h4>Polish</h4><p>Motion, colour, sound and captions.</p></li>
+        <li><span class="mono">OUT</span><h4>Deliver</h4><p>Masters for every platform, on time.</p></li>
+      </ol>
+    </section>
+
+    <!-- ============ SOCIAL PROOF ============ -->
+    <section class="proof section" aria-labelledby="proof-title">
+      <div class="section__head">
+        <p class="eyebrow mono">(04) Clients</p>
+        <h2 class="display" id="proof-title" data-split>Brands &amp; creators<br />on our timeline.</h2>
+      </div>
+      <div class="clients" data-clients></div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <div class="contact__intro">
+        <p class="eyebrow mono">(05) Start a project</p>
+        <h2 class="contact__title" data-split>Got footage?<br /><em>Let's cut it.</em></h2>
+        <p class="contact__lede">Tell us what you're making. We reply within one working day with ideas, a timeline and a quote.</p>
+        <div class="contact__direct">
+          <a class="contact__email" data-config-href="mailto" data-config-text="email" data-cursor="hover"></a>
+          <a class="btn btn--ghost" href="https://calendly.com/studiotimelinee" target="_blank" rel="noopener noreferrer" data-calendly data-cursor="hover">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm-2 8h14v10H5V10z"/></svg>
+            Book a 20-min call
+          </a>
+        </div>
+        <ul class="socials mono" aria-label="Social media">
+          <li><a data-social="instagram" target="_blank" rel="noopener" data-cursor="hover">Instagram ↗</a></li>
+          <li><a data-social="x" target="_blank" rel="noopener" data-cursor="hover">X / Twitter ↗</a></li>
+          <li><a data-social="linkedin" target="_blank" rel="noopener" data-cursor="hover">LinkedIn ↗</a></li>
+          <li><a data-social="youtube" target="_blank" rel="noopener" data-cursor="hover">YouTube ↗</a></li>
+        </ul>
+      </div>
+
+      <form class="intake" data-intake novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe" />
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="jane@brand.com" />
+        </div>
+
+        <fieldset class="field">
+          <legend>Project type</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="type" value="Video Editing" /><span>Video Editing</span></label>
+            <label><input type="checkbox" name="type" value="Shorts / Reels" /><span>Shorts / Reels</span></label>
+            <label><input type="checkbox" name="type" value="Colour & Sound" /><span>Colour &amp; Sound</span></label>
+            <label><input type="checkbox" name="type" value="Posters & Thumbnails" /><span>Posters &amp; Thumbnails</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Budget range</legend>
+          <div class="chips chips--radio">
+            <label><input type="radio" name="budget" value="Under ₹25k" /><span>&lt; ₹25k</span></label>
+            <label><input type="radio" name="budget" value="₹25k – ₹75k" /><span>₹25k – 75k</span></label>
+            <label><input type="radio" name="budget" value="₹75k – ₹2L" /><span>₹75k – 2L</span></label>
+            <label><input type="radio" name="budget" value="₹2L+" /><span>₹2L+</span></label>
+            <label><input type="radio" name="budget" value="Monthly retainer" /><span>Monthly retainer</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="f-msg">Tell us about it</label>
+          <textarea id="f-msg" name="message" rows="4" required placeholder="What are we making, where will it live, and when do you need it?"></textarea>
+        </div>
+
+        <div class="intake__foot">
+          <button class="btn btn--primary" type="submit" data-cursor="hover">
+            <span data-submit-label>Send brief</span>
+            <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          </button>
+          <p class="intake__status mono" role="status" data-form-status></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <a class="footer__cta" href="#contact" data-cursor="hover">Let's make something worth watching →</a>
+      <button class="footer__top-btn mono" type="button" data-to-top data-cursor="hover">Back to top ↑</button>
+    </div>
+    <div class="footer__word" aria-hidden="true">TimeLine</div>
+    <div class="footer__bar mono">
+      <span>© <span data-year></span> TimeLine Studio</span>
+      <span>Bengaluru, India — working worldwide</span>
+      <span data-clock>BLR 00:00:00</span>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden data-lightbox>
+    <div class="lightbox__backdrop" data-lb-close></div>
+    <div class="lightbox__frame">
+      <header class="lightbox__head">
+        <div>
+          <p class="mono" data-lb-meta></p>
+          <h3 id="lb-title" data-lb-title></h3>
+        </div>
+        <div class="lightbox__actions">
+          <a class="mono" data-lb-link target="_blank" rel="noopener">Open original ↗</a>
+          <button type="button" class="icon-btn" aria-label="Close" data-lb-close data-cursor="hover">
+            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </header>
+      <div class="lightbox__stage" data-lb-stage></div>
+      <footer class="lightbox__foot">
+        <button type="button" class="icon-btn" aria-label="Previous" data-lb-prev data-cursor="hover"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        <span class="mono" data-lb-count></span>
+        <button type="button" class="icon-btn" aria-label="Next" data-lb-next data-cursor="hover"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js" defer></script>
+  <script src="scripts/config.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
